@@ -1,6 +1,5 @@
 package com.project.service;
 
-import com.project.model.Projekt;
 import com.project.model.Student;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +15,7 @@ import java.net.URI;
 import java.util.Optional;
 
 public class StudentServiceImpl implements StudentService {
-    private static final Logger logger = LoggerFactory.getLogger(ProjektServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(StudentServiceImpl.class);
 
     @Value("${rest.server.url}")
     private String serverUrl;
