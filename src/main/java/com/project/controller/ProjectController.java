@@ -2,6 +2,7 @@ package com.project.controller;
 
 import com.project.model.Projekt;
 import com.project.service.ProjektService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +18,7 @@ import org.springframework.web.client.HttpStatusCodeException;
 public class ProjectController {
     private ProjektService projektService;
 
+    @Autowired
     public ProjectController(ProjektService projektService) {
         this.projektService = projektService;
     }

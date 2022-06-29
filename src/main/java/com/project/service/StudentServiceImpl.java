@@ -9,11 +9,13 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.util.Optional;
 
+@Service
 public class StudentServiceImpl implements StudentService {
     private static final Logger logger = LoggerFactory.getLogger(StudentServiceImpl.class);
 

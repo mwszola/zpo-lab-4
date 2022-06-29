@@ -9,12 +9,13 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.util.Optional;
 
-@SuppressWarnings("SpringJavaAutowiredMembersInspection")
+@Service
 public class ZadanieServiceImpl implements ZadanieService {
     private static final Logger logger = LoggerFactory.getLogger(ZadanieServiceImpl.class);
 
@@ -23,7 +24,7 @@ public class ZadanieServiceImpl implements ZadanieService {
 
     private final static String RESOURCE_PATH = "/api/zadania";
 
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     @Autowired
     public ZadanieServiceImpl(RestTemplate restTemplate) {

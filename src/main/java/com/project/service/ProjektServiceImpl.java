@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.project.model.Projekt;
 
+@Service
 public class ProjektServiceImpl implements ProjektService {
     private static final Logger logger = LoggerFactory.getLogger(ProjektServiceImpl.class);
 
