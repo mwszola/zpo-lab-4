@@ -16,9 +16,9 @@ public class ZadanieController {
         this.zadanieService = zadanieService;
     }
 
-    @GetMapping("/tasksList")
-    public String tasksList(Model model, Pageable pageable) {
+    @GetMapping("/taskList")
+    public String taskList(Model model, Pageable pageable) {
         model.addAttribute("zadania", zadanieService.getZadania(pageable).getContent());
-        return "tasksList";
+        return "taskList";
     }
 }
