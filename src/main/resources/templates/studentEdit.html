@@ -62,7 +62,7 @@
                                          th:errors="*{email}">Error</span>
             </div>
             <div>
-                <label for="stacjonarny" class="lbl">Email:</label>
+                <label for="stacjonarny" class="lbl">Stacjonarny:</label>
                 <input type="checkbox" th:field="*{stacjonarny}" class="fld"
                        th:class="${#fields.hasErrors('stacjonarny')}? 'err' : 'fld'"
                        size="45"/> <span class="err" th:if="${#fields.hasErrors('email')}"
