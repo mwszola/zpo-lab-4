@@ -2,10 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link th:href="@{/css/list-style.css}" rel="stylesheet"/>
     <title>Edycja projektu</title>
 </head>
 <body>
 <div class="root" th:with="isDelete=${#strings.equalsIgnoreCase(param.delete,'true')}">
+    <nav>
+        <ul>
+            <li>
+                <a href="/projektList">Projekty</a>
+            </li>
+            <li>
+                <a href="/taskList">Zadania</a>
+            </li>
+            <li>
+                <a href="/studentList">Studenci</a>
+            </li>
+        </ul>
+    </nav>
     <form action="#" th:action="@{/projektEdit}" th:object="${projekt}" method="POST"
           th:with="akcja=*{projektId} ? (${isDelete}?'delete':'update') :'create', opis=*{projektId} ? (${isDelete}?'Usuń':'Aktualizuj') : 'Utwórz'"
           autocomplete="off">

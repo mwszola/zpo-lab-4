@@ -2,10 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="pl">
     <meta charset="UTF-8">
+    <link th:href="@{/css/list-style.css}" rel="stylesheet"/>
     <title>Lista zadan</title>
 </head>
 <body>
 <div class="root">
+    <nav>
+        <ul>
+            <li>
+                <a href="/projektList">Projekty</a>
+            </li>
+            <li>
+                <a href="/taskList">Zadania</a>
+            </li>
+            <li>
+                <a href="/studentList">Studenci</a>
+            </li>
+        </ul>
+    </nav>
     <h1>Lista zadan</h1>
     <table>
         <thead>
